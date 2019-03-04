@@ -1,0 +1,6 @@
+#for s11
+python client-s11.py --device-id 1 --device bmv2 --config "/home/sdn/onos/pipelines/basic/src/main/resources/p4c-out/bmv2/int.json" --p4info "/home/sdn/onos/pipelines/basic/src/main/resources/p4c-out/bmv2/int.p4info" --cpu-port 255 --grpc-addr 127.0.0.1:$(cat /tmp/bmv2-s11-grpc-port) --election-id 87 --role-id 0
+#for s12
+python client-s12.py --device-id 1 --device bmv2 --config "/home/sdn/onos/pipelines/basic/src/main/resources/p4c-out/bmv2/int.json" --p4info "/home/sdn/onos/pipelines/basic/src/main/resources/p4c-out/bmv2/int.p4info" --cpu-port 255 --grpc-addr 127.0.0.1:$(cat /tmp/bmv2-s12-grpc-port) --election-id 87 --role-id 0
+#for s22
+python client-s22.py --device-id 1 --device bmv2 --config "/home/sdn/onos/pipelines/basic/src/main/resources/p4c-out/bmv2/int.json" --p4info "/home/sdn/onos/pipelines/basic/src/main/resources/p4c-out/bmv2/int.p4info" --cpu-port 255 --grpc-addr 127.0.0.1:$(cat /tmp/bmv2-s22-grpc-port) --election-id 87 --role-id 0
