@@ -461,6 +461,7 @@ class P4RuntimeClient():
     def get_new_write_request(self):
         req = p4runtime_pb2.WriteRequest()
         req.device_id = self.device_id
+        req.role_id = self.role_id
         election_id = req.election_id
         election_id.high = 0
         election_id.low = self.election_id
@@ -495,6 +496,7 @@ class P4RuntimeClient():
     def ReadTableEntries(self, table_id=None, dry_run=False):
         request = p4runtime_pb2.ReadRequest()
         request.device_id = self.device_id
+        req.role_id = self.role_id
         entity = request.entities.add()
         table_entry = entity.table_entry
         if table_id is not None:

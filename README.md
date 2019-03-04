@@ -26,7 +26,7 @@ optional arguments:
   --device-id DEVICE_ID
                         Device id for device under test
   --skip-config         Assume a device with pipeline already configured
-  --set-role-config     Assume a device needs role config
+  --skip-role-config     Assume a device do not need role config
   --election-id ELECTION_ID
                         ID for mastership election
   --role-id ROLE_ID     ID for distinguish different client
@@ -40,7 +40,7 @@ python client.py --device-id 1 --device bmv2 --grpc-addr 127.0.0.1:54717 --elect
 ```
 
 - Clients I found and Referenced:
-    - This repo is based on the client from buck5060 and modified for regular basic pipeline without role-id configured.
+    - This branch is based on the client from buck5060 for multi-tenant pipeline
 
 
 - Dependence
@@ -48,5 +48,5 @@ python client.py --device-id 1 --device bmv2 --grpc-addr 127.0.0.1:54717 --elect
     - grpc and etc.
 
 - References:
-    - [1] [P4Runtime_Python_Client] (https://github.com/buck5060/P4Runtime_Python_Client.git)
+    - [1] [P4Runtime_Python_Client](https://github.com/buck5060/P4Runtime_Python_Client.git)
     - [2] [fabric-p4test](https://github.com/opennetworkinglab/fabric-p4test)
